@@ -1,72 +1,122 @@
 🎬 ClipGenius AI — Turn Podcasts Into Viral Clips Instantly
 
-Your SAAS! project is an AI-powered podcast clip generator that automatically creates viral short-form video clips from longer podcast content. It's designed to help content creators and podcasters extract engaging moments and convert them into vertical video clips optimized for social media platforms.
+Your SaaS project is an AI-powered podcast clip generator that automatically creates viral short-form video clips from longer podcast content. It’s designed to help content creators and podcasters extract engaging moments and convert them into vertical videos optimized for social media platforms.
+
 Core Functionality
-🎯 Main Purpose
-The system takes long-form podcast videos and automatically:
+Main purpose: The system takes long-form podcast videos and automatically:
+
 Identifies viral moments using AI
+
 Creates vertical video clips (9:16 aspect ratio for mobile)
+
 Adds professional subtitles
+
 Focuses on active speakers using computer vision
-Uploads to cloud storage for distribution
-🔧 Technical Architecture
-Backend (SAAS_Backend/)
+
+Uploads final clips to cloud storage for easy distribution
+
+Technical Architecture
+Backend:
+
+SAAS_Backend/
+
 Framework: FastAPI with Modal cloud deployment
-AI Models:
+
+AI models:
+
 WhisperX for speech-to-text transcription
+
 Google Gemini for identifying viral moments
-LR-ASD (Active Speaker Detection) for tracking who's speaking
-Video Processing: FFmpeg for video manipulation
-Cloud Storage: AWS S3 for storing processed clips
-Key Components:
+
+LR-ASD (Active Speaker Detection) for tracking who’s speaking
+
+Video processing:
+
+FFmpeg for video manipulation
+
+Cloud storage:
+
+AWS S3 for storing processed clips
+
+Key Components
 Video Processing Pipeline (main.py):
-Downloads/processes input videos
+
+Downloads and processes input videos
+
 Extracts audio for transcription
-Cuts video segments based on AI-selected moments
+
+Cuts video segments based on AI-selected highlights
+
 Creates vertical format videos
-Adds subtitles with custom styling
+
+Adds custom-styled subtitles
+
 Active Speaker Detection (LR-ASD/):
+
 Uses computer vision to detect faces in video frames
-Tracks speakers across video segments
-Determines who is actively speaking
-Creates focused video crops around the active speaker
+
+Tracks speakers across segments
+
+Detects active speakers in real time
+
+Creates focused video crops around the speaker
+
 AI Content Selection:
+
 WhisperX: Transcribes audio with word-level timestamps
-Google Gemini: Analyzes transcript to find engaging moments (stories, jokes, strong opinions, emotional moments)
-Chunking: Handles long podcasts by processing in 10-minute segments
-A. Video Processing Features
-Vertical Video Creation: Converts horizontal videos to 9:16 format (1080x1920)
-Smart Cropping: Automatically focuses on the active speaker
-Background Blur: Applies aesthetic background blur when no speaker is detected
-Professional Subtitles: Custom-styled subtitles with proper timing
-Hardware Acceleration: Uses NVIDIA GPU acceleration when available
-B. Dependencies (from requirements.txt)
+
+Google Gemini: Analyzes transcripts to find stories, jokes, strong opinions, and emotional moments
+
+Chunking: Processes long podcasts in 10-minute segments
+
+Video Processing Features
+Converts horizontal videos to 9:16 format (1080x1920)
+
+Smart cropping focuses on the active speaker
+
+Background blur when no speaker is detected
+
+Custom-styled subtitles with proper timing
+
+NVIDIA GPU acceleration when available
+
+Dependencies (from requirements.txt)
 AI/ML: torch, transformers, whisperx, google-generativeai
-Video Processing: opencv-python-headless, ffmpegcv, scenedetect
+
+Video: opencv-python-headless, ffmpegcv, scenedetect
+
 Cloud: boto3, modal
-Web Framework: fastapi
+
+Web: fastapi
+
 Audio: python_speech_features
-🚀 Deployment
+
+Deployment
 Uses Modal for cloud deployment with GPU support
+
 Docker-like containerization with CUDA 12.4 support
+
 Volume storage for model caching
+
 S3 integration for scalable storage
-C. Use Cases
-This system is perfect for:
-Podcast creators wanting to create TikTok/Instagram Reels
-Content marketers looking to repurpose long-form content
-Social media managers needing viral clip generation
-Video editors wanting to automate clip creation
-D. Workflow
+
+Use Cases
+Perfect for:
+
+Podcast creators making TikToks or Instagram Reels
+
+Content marketers repurposing long-form content
+
+Social media managers generating viral clips
+
+Video editors automating clip creation
+
+Workflow
 Input: Long podcast video (local file or YouTube URL)
-Processing:
-Audio extraction and transcription
-AI analysis for viral moments
-Video segmentation and processing
-Active speaker detection and cropping
-Subtitle generation
-Output: Multiple vertical video clips with subtitles, uploaded to S3
-The project represents a sophisticated AI-powered content automation system that bridges the gap between long-form podcast content and short-form social media consumption, using cutting-edge computer vision and natural language processing technologies.
+Processing: Audio extraction, transcription, AI highlight detection, video segmentation, speaker detection and cropping, subtitle generation
+Output: Multiple vertical video clips with subtitles uploaded to S3
+
+This project is a modern AI-powered content automation system that bridges the gap between long-form podcasts and short-form social media videos using advanced computer vision and NLP technology.
 🧩 Tech Stack
  Feature        :      Details                                                                                           
  -------------------------------------------------------------------------------------------------------------------------

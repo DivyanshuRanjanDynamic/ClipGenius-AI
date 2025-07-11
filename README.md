@@ -548,10 +548,9 @@ Built with ❤️ for creators who want to go viral, faster.
 
 
 
->>>>>>> 1b3df602ce4862c1f188c6b26b822c2c938d0eed
 
 
-<<<<<<< HEAD
+
 <div align="center">
 
 **Built with ❤️ for creators who want to go viral, faster.**
@@ -561,5 +560,4 @@ Built with ❤️ for creators who want to go viral, faster.
 [![GitHub issues](https://img.shields.io/github/issues/DivyanshuRanjanDynamic/ClipGenius-AI)](https://github.com/DivyanshuRanjanDynamic/ClipGenius-AI/issues)
 
 </div> 
-=======
->>>>>>> 1b3df602ce4862c1f188c6b26b822c2c938d0eed
+

@@ -273,8 +273,7 @@ SAAS_Backend/
 🟢 Container: Docker-like environment with CUDA 12.4 support
 
 
-🤝 Contributing
-🙌 We love contributions! Please read our CONTRIBUTING.md.
+
 
 Quick Start:
 git checkout -b feature/my-feature

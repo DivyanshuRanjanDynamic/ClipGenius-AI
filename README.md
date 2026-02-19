@@ -1,6 +1,8 @@
 
 # 🎬 ClipGenius AI - Enterprise-Grade Podcast Clip Generator
 
+See Demo : https://podclipper.vercel.app/dashboard
+
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-green.svg)](https://fastapi.tiangolo.com/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)

@@ -1,5 +1,5 @@
 
-# 🎬 ClipGenius AI - Enterprise-Grade Podcast Clip Generator
+# 🎬 ClipGenius AI -- Enterprise-Grade Podcast Clip Generator
 
 See Demo : https://podclipper.vercel.app/
 
